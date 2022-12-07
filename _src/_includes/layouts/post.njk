@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-home
+---
+
+{# This is the template for individual blog posts–it builds the front matter properties into the page #}
+
+<div class="wrapper post">
+  <div>
+    {# The post front matter includes the title property #}
+    <h1 class='postTitle'>{{title}}</h1>
+
+    {%- for tag in tags | filterTagList %}
+    {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+    <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+    {%- endfor %}
+
+    {# ADD P ELEMENT FROM TODO ON THE NEXT LINE #}
+
+    {# Content from the body of the post markdown appears here #}
+    {{ content | safe }}
+
+    <div class="controls">
+      {% if collections.posts %}
+      {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+      {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+
+      {% if previousPost %}
+      <p><strong>Previous post</strong>: <a class="previous" href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></p>
+      {% endif %}
+
+      {% if nextPost %}
+      <p><strong>Next post</strong>: <a class="next" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
+      {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</div>
