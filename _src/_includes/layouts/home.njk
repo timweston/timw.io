@@ -7,16 +7,22 @@ templateClass: tmpl-home
   <div class="content">
     {{ content | safe }}
     {# After the the content defined in index.md, list the blog posts in the collection #}
-    <ul>
       {% for post in collections.posts | reverse %}
-      <li>
-        {{ post.data.page.date | htmlDateString }} — <a href='{{ post.url }}'>{{ post.data.title }}</a>
-        {% for tag in post.data.tags | filterTagList %}
-        {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-        {% endfor %}
-      </li>
+      <article>
+        <a href="{{ post.url }}">
+          <header><h2>{{ post.data.title }}</h2></header>
+          <section>Excerpt goes here.</section>
+        </a>
+        <footer>
+          <time datetime="{{ post.data.page.date | htmlDateString }}">{{ post.data.page.date | readableDate }}</time>
+          <span>
+            {% for tag in post.data.tags | filterTagList %}
+            {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+            <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+            {% endfor %}
+          </span>
+        </footer>
+      </article>
       {% endfor %}
-      </ul>
   </div>
 </div>
