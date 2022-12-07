@@ -1,6 +1,4 @@
 ---
-title: 'Hello World'
-layout: base.njk
+title: timw.io
+layout: layouts/home.njk
 ---
-
-This is a home page.
