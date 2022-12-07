@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Your new 11ty blog" />
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <title>{{ title or metadata.title }}</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+  </head>
+  <body>
+  <main>
+      <header class="header">
+        <h1 class="site-title"><a href="/">Tim Weston</a></h1>
+        <nav class="nav">
+          <ul class="nav_list">
+            <li class="nav_item"><a href="/about">About</a></li>
+            <li class="nav_item"><a href="/archive">Archive</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    {# Page or post content will appear here #}
+
+    {{ content | safe }}
+
+      <footer class="footer">
+        <nav class="nav">
+          <ul class="nav_list">
+            <li class="nav_item"><a href="/about">About</a></li>
+            <li class="nav_item"><a href="/archive">Archive</a></li>
+          </ul>
+        </nav>
+      </footer>
+  </main>
+  </body>
+</html>
