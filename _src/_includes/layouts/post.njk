@@ -6,28 +6,36 @@ templateClass: tmpl-home
 {# This is the template for individual blog posts–it builds the front matter properties into the page #}
 
 <div class="wrapper post">
-  <div>
-    {# The post front matter includes the title property #}
-    <h1 class='postTitle'>{{title}}</h1>
+  <div class="content">
+    <article>
+      {# The post front matter includes the title property #}
+      <header>
+        <h2 class='post-title'>{{title}}</h2>
+        <div class="post-details">
+          <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+          <span class="post-tags">
+          {%- for tag in tags | filterTagList %}
+          {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+          <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+          {%- endfor %}
+          </span>
+        </div>
+      </header>
 
-    {%- for tag in tags | filterTagList %}
-    {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-    <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-    {%- endfor %}
+      {# ADD P ELEMENT FROM TODO ON THE NEXT LINE #}
 
-    {# ADD P ELEMENT FROM TODO ON THE NEXT LINE #}
+      {# Content from the body of the post markdown appears here #}
+      {{ content | safe }}
 
-    {# Content from the body of the post markdown appears here #}
-    {{ content | safe }}
+      <div class="controls">
+        {% if collections.posts %}
+        {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+        {% set prevPost = collections.posts | getPreviousCollectionItem(page) %}
 
-    <div class="controls">
-      {% if collections.posts %}
-      {% set nextPost = collections.posts | getNextCollectionItem(page) %}
-      {% set prevPost = collections.posts | getPreviousCollectionItem(page) %}
-
-      {% if nextPost %}&larr; <a class="next" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>{% endif %}
-      {% if prevPost %}<a class="prev" href="{{ prevPost.url | url }}">{{ prevPost.data.title }}</a> &rarr;{% endif %}
-      {% endif %}
-    </div>
+        {% if nextPost %}&larr; <a class="next" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>{% endif %}
+        {% if prevPost %}<a class="prev" href="{{ prevPost.url | url }}">{{ prevPost.data.title }}</a> &rarr;{% endif %}
+        {% endif %}
+      </div>
+    </article>
   </div>
 </div>
