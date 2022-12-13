@@ -1,4 +1,4 @@
 ---
-title: timw.io
+title: Home
 layout: layouts/home.njk
 ---
