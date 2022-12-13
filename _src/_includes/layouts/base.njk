@@ -3,35 +3,48 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Your new 11ty blog" />
-    <meta name="generator" content="{{ eleventy.generator }}">
-    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="timw.io - Tim Weston" />
+    <meta name="generator" content="{{ eleventy.generator }}" />
+    <title>{{ title }} - Tim Weston</title>
     <link rel="stylesheet" href="/css/normalize.css" />
   </head>
   <body>
-  <main>
+    <div class="layout-wrapper">
       <header class="header">
-        <h1 class="site-title"><a href="/">Tim Weston</a></h1>
-        <nav class="nav">
-          <ul class="nav_list">
-            <li class="nav_item"><a href="/about">About</a></li>
-            <li class="nav_item"><a href="/archive">Archive</a></li>
-          </ul>
-        </nav>
+        <div class="header-content">
+          <h1 class="site-title"><a href="/">Tim Weston</a></h1>
+          <nav class="nav">
+            <ul class="nav_list">
+              <li class="nav_item"><a href="/about">About</a></li>
+              <li class="nav_item">
+                <a href="/archive">Archive</a>
+              </li>
+              <li class="nav_item">
+                <a href="https://worldkey.io/@tim" rel="me">Mastodon</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
-
-    {# Page or post content will appear here #}
-
-    {{ content | safe }}
-
+      <main class="main">
+        {# Page or post content will appear here #}
+        {{ content | safe }}
+      </main>
       <footer class="footer">
-        <nav class="nav">
-          <ul class="nav_list">
-            <li class="nav_item"><a href="/about">About</a></li>
-            <li class="nav_item"><a href="/archive">Archive</a></li>
-          </ul>
-        </nav>
+        <div class="footer-content">
+          <nav class="nav">
+            <ul class="nav_list">
+              <li class="nav_item"><a href="/about">About</a></li>
+              <li class="nav_item">
+                <a href="/archive">Archive</a>
+              </li>
+              <li class="nav_item">
+                <a href="https://worldkey.io/@tim" rel="me">Mastodon</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </footer>
-  </main>
+    </div>
   </body>
 </html>
