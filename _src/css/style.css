@@ -1,0 +1,18 @@
+/* custom overrides to styles in tufte.css */
+
+/* remove excessive margin above and below h1 */
+h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* remove excessive margin above and below h2 */
+h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* remove excessive padding above and below article */
+article {
+  padding: 1rem 0rem;
+}
