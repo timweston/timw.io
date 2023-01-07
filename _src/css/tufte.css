@@ -95,8 +95,8 @@ body {
 
 h1 {
   font-weight: 400;
-  margin-top: 1rem; /* changed from 4rem */
-  margin-bottom: 1rem; /* changed from 1.5rem */
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
   font-size: 3.2rem;
   line-height: 1;
 }
@@ -104,8 +104,8 @@ h1 {
 h2 {
   font-style: italic;
   font-weight: 400;
-  margin-top: 1rem; /* changed from 2.1rem */
-  margin-bottom: 1rem; /* changed from 1.4rem */
+  margin-top: 2.1rem;
+  margin-bottom: 1.4rem;
   font-size: 2.2rem;
   line-height: 1;
 }
@@ -147,7 +147,7 @@ p.subtitle {
 }
 
 article {
-  padding-bottom: 2rem; /* changed from padding: 5rem 0rem */
+  padding: 5rem 0rem;
 }
 
 section {
