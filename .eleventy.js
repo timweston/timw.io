@@ -1,6 +1,10 @@
 const { DateTime } = require('luxon');
+
 /* RSS plugin */
 const pluginRss = require('@11ty/eleventy-plugin-rss');
+
+/* markdown-it */
+const markdownIt = require('markdown-it');
 
 module.exports = function (eleventyConfig) {
   /* Add RSS plugin */
@@ -17,6 +21,11 @@ module.exports = function (eleventyConfig) {
 
   /* Allow passthrough of img folder */
   eleventyConfig.addPassthroughCopy('_src/img');
+
+  /* Add filter for markdown-it; ensures excerpts are processed through markdown */
+  eleventyConfig.addFilter('md', function (content = '') {
+    return markdownIt({ html: true }).render(content);
+  });
 
   /* Add filter for readable date */
   eleventyConfig.addFilter('readableDate', (dateObj) => {

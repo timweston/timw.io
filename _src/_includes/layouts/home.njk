@@ -24,7 +24,7 @@ templateClass: tmpl-home
         </header>
         <section>
           <p>
-          {{ post.data.page.excerpt | safe }}
+          {{ post.data.page.excerpt | md | safe }}
           </p>
           <span><a href="{{ post.url }}">Continue reading&hellip;</a></span>
         </section>
