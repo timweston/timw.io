@@ -14,5 +14,11 @@ h2 {
 
 /* remove excessive padding above and below article */
 article {
-  padding: 1rem 0rem;
+  padding: 0.5rem 0rem;
+}
+
+/* remove excessive padding above and below section */
+section {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
