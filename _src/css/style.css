@@ -23,11 +23,32 @@ section {
   padding-bottom: 0rem;
 }
 
+/* remove excessive padding above and below epigraph */
 div.epigraph {
   margin: 0;
 }
 
+/* remove excessive padding above and below epigraph blockquote */
 div.epigraph > blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+/* reset a:link style on site title, navigation, and footer links */
+h1.site-title a:link,
+header li a:link,
+a.all-posts {
+  background: none;
+}
+
+/* begin: navigation bar in header */
+header ul {
+  padding-inline-start: 0px;
+}
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 10px 0 0;
+}
+/* end: navigation bar in header */
