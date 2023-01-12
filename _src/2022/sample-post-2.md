@@ -4,12 +4,16 @@ description: 'Sample Post 2 Description'
 date: 2022-11-15
 tags:
   - posts
-  - some-tag-2
-  - sample-tag
+  - sample tag
+  - some tag 2
 layout: layouts/post.njk
 ---
 
 Odio eu feugiat pretium nibh ipsum consequat nisl. Nibh sit amet commodo nulla. Facilisis sed odio morbi quis. Sit amet purus gravida quis blandit. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. Eget nunc lobortis mattis aliquam faucibus purus. Aliquet nec ullamcorper sit amet. Leo vel orci porta non pulvinar neque. Condimentum vitae sapien pellentesque habitant morbi tristique senectus et netus. Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi. Sed risus ultricies tristique nulla aliquet enim. Mattis pellentesque id nibh tortor id aliquet. Ultrices vitae auctor eu augue ut lectus arcu.
+
+<pre><code>
+Some code example here, inside a code inside a pre
+</code></pre>
 
 <!-- excerpt -->
 

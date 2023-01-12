@@ -4,12 +4,23 @@ description: 'Sample Post 3 Description'
 date: 2022-12-01
 tags:
   - posts
-  - some-tag-3
-  - another-tag
+  - another tag
+  - some tag 3
 layout: layouts/post.njk
 ---
 
 Urna duis convallis convallis tellus id. Hac habitasse platea dictumst vestibulum rhoncus. Nunc lobortis mattis aliquam faucibus purus. Nulla porttitor massa id neque aliquam vestibulum morbi. Montes nascetur ridiculus mus mauris. Pellentesque diam volutpat commodo sed egestas egestas fringilla. Malesuada fames ac turpis egestas. Velit aliquet sagittis id consectetur purus. Arcu cursus vitae congue mauris rhoncus aenean vel elit. Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Dolor sed viverra ipsum nunc aliquet bibendum. Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis. Aliquam sem et tortor consequat id porta nibh venenatis. Eu augue ut lectus arcu. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Eget nunc scelerisque viverra mauris in aliquam sem fringilla ut. Congue nisi vitae suscipit tellus mauris a.
+
+<div class="epigraph">
+  <blockquote>
+    <p>The English language . . . becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts.</p>
+    <footer>George Orwell, “Politics and the English Language”</footer>
+  </blockquote>
+  <blockquote>
+    <p>For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled.</p>
+    <footer>Richard P. Feynman, <cite>“What Do You Care What Other People Think?”</cite></footer>
+  </blockquote>
+</div>
 
 <!-- excerpt -->
 

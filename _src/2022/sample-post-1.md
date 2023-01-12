@@ -4,11 +4,14 @@ description: 'Sample Post 1 Description'
 date: 2022-10-11
 tags:
   - posts
-  - some-tag-1
+  - sample tag
+  - some tag 1
 layout: layouts/post.njk
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Sem viverra aliquet eget sit amet tellus cras. Lacus vel facilisis volutpat est velit egestas dui id ornare. Mauris nunc congue nisi vitae suscipit tellus mauris. Quam vulputate dignissim suspendisse in est. Turpis egestas maecenas pharetra convallis posuere morbi leo urna molestie. Imperdiet proin fermentum leo vel orci porta non. Quam viverra orci sagittis eu volutpat odio. Varius sit amet mattis vulputate enim nulla aliquet. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Enim nec dui nunc mattis. Morbi non arcu risus quis varius quam quisque id diam. Integer enim neque volutpat ac tincidunt vitae semper. Pellentesque habitant morbi tristique senectus et netus et. In ante metus dictum at tempor commodo ullamcorper. Lorem ipsum dolor sit amet. Morbi leo urna molestie at elementum. Sed tempus urna et pharetra.
+
+![Alt Text](/img/rhino.png 'title')
 
 <!-- excerpt -->
 
