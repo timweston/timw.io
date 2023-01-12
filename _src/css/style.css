@@ -22,3 +22,12 @@ section {
   padding-top: 0rem;
   padding-bottom: 0rem;
 }
+
+div.epigraph {
+  margin: 0;
+}
+
+div.epigraph > blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
