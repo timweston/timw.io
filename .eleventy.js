@@ -66,7 +66,7 @@ module.exports = function (eleventyConfig) {
     collection.getAll().forEach((item) => {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     });
-    return filterTagList([...tagSet]);
+    return filterTagList([...tagSet]).sort();
   });
 
   return {
