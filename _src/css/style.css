@@ -1,4 +1,4 @@
-/* custom overrides to styles in tufte.css */
+/* begin: custom overrides to styles in tufte.css */
 
 /* remove excessive margin above and below h1 */
 h1 {
@@ -41,6 +41,7 @@ footer li a:link,
 a.all-posts {
   background: none;
 }
+/* end: custom overrides to styles in tufte.css */
 
 /* begin: navigation bar in header and footer */
 header ul,
