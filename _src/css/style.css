@@ -37,18 +37,21 @@ div.epigraph > blockquote {
 /* reset a:link style on site title, navigation, and footer links */
 h1.site-title a:link,
 header li a:link,
+footer li a:link,
 a.all-posts {
   background: none;
 }
 
-/* begin: navigation bar in header */
-header ul {
+/* begin: navigation bar in header and footer */
+header ul,
+footer ul {
   padding-inline-start: 0px;
 }
 
-header li {
+header li,
+footer li {
   list-style: none;
   display: inline-block;
-  padding: 0 10px 0 0;
+  padding: 0 20px 0 0;
 }
-/* end: navigation bar in header */
+/* end: navigation bar in header and footer */
