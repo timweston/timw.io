@@ -4,7 +4,9 @@ layout: layouts/base.njk
 
 <div class="post-list-wrapper">
   <div class="post-list">
+    {% set atPost = 1 %}
     {% for post in collections.posts | reverse %}
+    {% if atPost <= 5 %}
     <article>
         <header class="post-header">
           <a href="{{ post.url }}"><h2 class="post-title">{{ post.data.title }}</h2></a>
@@ -28,6 +30,8 @@ layout: layouts/base.njk
           <span><a href="{{ post.url }}">Continue reading&hellip;</a></span>
         </section>
     </article>
+    {% endif%}
+    {% set atPost = atPost + 1 %}
     {% endfor %}
     <p><a href="/archive/" class="all-posts">View All Posts</a></p>
   </div>
