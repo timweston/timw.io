@@ -2,28 +2,23 @@
 layout: layouts/base.njk
 ---
 
-<div class="post-list-wrapper">
-  <div class="post-list">
-    {% for post in collections.posts | reverse %}
-    <article>
-      <header class="post-header">
-        <a href="{{ post.url }}"
-          ><h2 class="post-title">{{ post.data.title }}</h2></a
-        >
-        <div class="post-details">
-          <time datetime="{{ post.data.page.date | htmlDateString }}">{{
-            post.data.page.date | readableDate
-          }}</time>
-          <span class="sep">&bull;</span>
-          <span class="post-tags">
-            {% for tag in post.data.tags | filterTagList %} {% set tagUrl
-            %}/tags/{{ tag | slugify }}/{% endset %}
-            <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-            {% endfor %}
-          </span>
-        </div>
-      </header>
-    </article>
-    {% endfor %}
-  </div>
-</div>
+{% for post in collections.posts | reverse %}
+<article>
+  <header>
+    <a href="{{ post.url }}"><h2>{{ post.data.title }}</h2></a>
+    <time datetime="{{ post.data.page.date | htmlDateString }}">{{ post.data.page.date | readableDate }}</time>
+    <span>&bull;</span>
+    <span>
+      {% for tag in post.data.tags | filterTagList %} {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+      <a href="{{ tagUrl | url }}">{{ tag }}</a>
+      {% endfor %}
+    </span>
+  </header>
+  <section>
+    <p>
+      {{ post.data.page.excerpt | md | safe }}
+    </p>
+    <span><a href="{{ post.url }}">Continue reading&hellip;</a></span>
+  </section>
+</article>
+{% endfor %}

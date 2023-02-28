@@ -1,58 +1,10 @@
-/* begin: custom overrides to styles in tufte.css */
-
-/* remove excessive margin above and below h1 */
-h1 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+/* Overrides to simple.css */
+body > footer {
+  margin-top: 2rem;
+  padding: 1rem 1rem 1.5rem 1rem;
 }
 
-/* remove excessive margin above and below h2 */
-h2 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* remove excessive padding above and below article */
-article {
-  padding: 0.5rem 0rem;
-}
-
-/* remove excessive padding above and below section */
 section {
-  padding-top: 0rem;
-  padding-bottom: 0rem;
+  padding: 1rem;
+  margin: 2rem 0;
 }
-
-/* remove excessive padding above and below epigraph */
-div.epigraph {
-  margin: 0;
-}
-
-/* remove excessive padding above and below epigraph blockquote */
-div.epigraph > blockquote {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-/* reset a:link style on site title, navigation, and footer links */
-h1.site-title a:link,
-header li a:link,
-footer li a:link,
-a.all-posts {
-  background: none;
-}
-/* end: custom overrides to styles in tufte.css */
-
-/* begin: navigation bar in header and footer */
-header ul,
-footer ul {
-  padding-inline-start: 0px;
-}
-
-header li,
-footer li {
-  list-style: none;
-  display: inline-block;
-  padding: 0 20px 0 0;
-}
-/* end: navigation bar in header and footer */

@@ -10,11 +10,9 @@ tags:
 layout: layouts/post.njk
 ---
 
-Odio eu feugiat pretium nibh ipsum consequat nisl. Nibh sit amet commodo nulla. Facilisis sed odio morbi quis. Sit amet purus gravida quis blandit. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. Eget nunc lobortis mattis aliquam faucibus purus. Aliquet nec ullamcorper sit amet. Leo vel orci porta non pulvinar neque. Condimentum vitae sapien pellentesque habitant morbi tristique senectus et netus. Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi. Sed risus ultricies tristique nulla aliquet enim. Mattis pellentesque id nibh tortor id aliquet. Ultrices vitae auctor eu augue ut lectus arcu.
+Odio eu feugiat pretium nibh ipsum consequat nisl. Nibh sit amet commodo nulla. Facilisis sed odio morbi quis. <!-- excerpt --> Sit amet purus gravida quis blandit. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. Eget nunc lobortis mattis aliquam faucibus purus. Aliquet nec ullamcorper sit amet. Leo vel orci porta non pulvinar neque. Condimentum vitae sapien pellentesque habitant morbi tristique senectus et netus. Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi. Sed risus ultricies tristique nulla aliquet enim. Mattis pellentesque id nibh tortor id aliquet. Ultrices vitae auctor eu augue ut lectus arcu.
 
 <pre><code>Some code example here, inside a code inside a pre</code></pre>
-
-<!-- excerpt -->
 
 Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Nunc eget lorem dolor sed viverra ipsum nunc aliquet. Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Vestibulum lorem sed risus ultricies tristique. Non sodales neque sodales ut etiam sit. Sed turpis tincidunt id aliquet. Justo donec enim diam vulputate ut pharetra sit. In tellus integer feugiat scelerisque varius morbi enim nunc. Ornare lectus sit amet est placerat. In est ante in nibh mauris cursus mattis molestie a. A diam maecenas sed enim ut sem viverra. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere.
 
