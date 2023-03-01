@@ -6,6 +6,9 @@
     <meta name="description" content="timw.io - Tim Weston" />
     <meta name="generator" content="{{ eleventy.generator }}" />
     <title>{{ title }} - timw.io</title>
+    {% if canonical %}
+    <link rel="canonical" href="{{ canonical }}" />
+    {% endif %}
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/simple.css" />
     <link rel="stylesheet" href="/css/style.css" />
