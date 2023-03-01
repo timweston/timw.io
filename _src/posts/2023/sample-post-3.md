@@ -2,7 +2,7 @@
 title: 'Sample Post 3'
 description: 'Sample Post 3 Description'
 date: 2023-01-01
-permalink: /{{date | pathDate}}/{{ title | slug }}
+permalink: /{{date | pathDate}}/{{ title | slug }}/index.html
 tags:
   - posts
   - another tag
