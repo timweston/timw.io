@@ -5,7 +5,7 @@ layout: layouts/base.njk
 <article>
   {# The post front matter includes the title property #}
   <header>
-    <h2>{{ title }}</h2>
+    <a href="{{ page.url }}"><h2>{{ title }}</h2></a>
     <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
     <span>&bull;</span>
     <span>
