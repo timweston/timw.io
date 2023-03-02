@@ -1,5 +1,8 @@
 const { DateTime } = require('luxon');
 
+/* eleventy-plugin-syntaxhighlight plugin */
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+
 /* RSS plugin */
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 
@@ -7,6 +10,9 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const markdownIt = require('markdown-it');
 
 module.exports = function (eleventyConfig) {
+  /* Add eleventy-plugin-syntaxhighlight plugin */
+  eleventyConfig.addPlugin(syntaxHighlight);
+
   /* Add RSS plugin */
   eleventyConfig.addPlugin(pluginRss);
 
