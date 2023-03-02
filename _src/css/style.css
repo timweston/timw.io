@@ -1,4 +1,4 @@
-/* Overrides to simple.css */
+/* Begin - Overrides to simple.css */
 body > footer {
   margin-top: 2rem;
   padding: 1rem 1rem 1.5rem 1rem;
@@ -11,4 +11,9 @@ section {
 
 a:any-link {
   text-decoration: none;
+}
+/* End - Overrides to simple.css */
+
+header > nav > a > svg {
+  vertical-align: middle;
 }
