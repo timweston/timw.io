@@ -1,5 +1,8 @@
 const { DateTime } = require('luxon');
 
+/* eleventy-plugin-seo plugin */
+const pluginSEO = require('eleventy-plugin-seo');
+
 /* eleventy-plugin-syntaxhighlight plugin */
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
@@ -10,6 +13,9 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const markdownIt = require('markdown-it');
 
 module.exports = function (eleventyConfig) {
+  /* Add eleventy-plugin-seo plugin */
+  eleventyConfig.addPlugin(pluginSEO, require('./_src/_data/seo.json'));
+
   /* Add eleventy-plugin-syntaxhighlight plugin */
   eleventyConfig.addPlugin(syntaxHighlight);
 

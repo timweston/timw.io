@@ -1,7 +1,6 @@
 ---
 title: Colophon
 layout: layouts/page.njk
-canonical: 'https://timw.io/colophon/'
 ---
 
 <header>
