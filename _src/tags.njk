@@ -25,10 +25,9 @@ eleventyComputed:
   <header>
     <h2 class="p-name"><a class="u-url" href="{{ post.url }}">{{ post.data.title }}</a></h2>
     <time class="dt-published" datetime="{{ post.data.page.date | htmlDateString }}">{{ post.data.page.date | readableDate }}</time>
-    <span>&bull;</span>
     <span>
       {% for tag in post.data.tags | filterTagList %} {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-      <a href="{{ tagUrl | url }}">{{ tag }}</a>
+      &bull; <a href="{{ tagUrl | url }}">{{ tag }}</a>
       {% endfor %}
     </span>
   </header>

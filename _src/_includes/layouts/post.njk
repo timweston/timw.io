@@ -6,10 +6,9 @@ layout: layouts/base.njk
   <header>
     <h2 class="p-name"><a class="u-url" href="{{ page.url }}">{{ title }}</a></h2>
     <time class="dt-published" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-    <span>&bull;</span>
     <span>
       {%- for tag in tags | filterTagList %} {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-      <a href="{{ tagUrl | url }}">{{ tag }}</a>
+      &bull; <a href="{{ tagUrl | url }}">{{ tag }}</a>
       {%- endfor %}
     </span>
   </header>
