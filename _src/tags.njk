@@ -23,7 +23,7 @@ eleventyComputed:
 {% for post in postslist | reverse %}
 <article>
   <header>
-    <a href="{{ post.url }}"><h2>{{ post.data.title }}</h2></a>
+    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
     <time datetime="{{ post.data.page.date | htmlDateString }}">{{ post.data.page.date | readableDate }}</time>
     <span>&bull;</span>
     <span>
