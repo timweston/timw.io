@@ -2,11 +2,10 @@
 layout: layouts/base.njk
 ---
 
-<article>
-  {# The post front matter includes the title property #}
+<article class="h-entry">
   <header>
-    <h2><a href="{{ page.url }}">{{ title }}</a></h2>
-    <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+    <h2 class="p-name"><a class="u-url" href="{{ page.url }}">{{ title }}</a></h2>
+    <time class="dt-published" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
     <span>&bull;</span>
     <span>
       {%- for tag in tags | filterTagList %} {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
@@ -14,11 +13,9 @@ layout: layouts/base.njk
       {%- endfor %}
     </span>
   </header>
-
-  <section>
+  <section class="e-content">
     {{ content | safe }}
   </section>
-
   <footer>
     {% if collections.posts %}
     {% set nextPost = collections.posts | getNextCollectionItem(page) %}
