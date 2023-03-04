@@ -2,22 +2,5 @@
 layout: layouts/base.njk
 ---
 
-{% for post in collections.posts | reverse %}
-<article class="h-entry">
-  <header>
-    <h2 class="p-name"><a class="u-url" href="{{ post.url }}">{{ post.data.title }}</a></h2>
-    <time class="dt-published" datetime="{{ post.data.page.date | htmlDateString }}">{{ post.data.page.date | readableDate }}</time>
-    <span>
-      {% for tag in post.data.tags | filterTagList %} {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-      &bull; <a href="{{ tagUrl | url }}">{{ tag }}</a>
-      {% endfor %}
-    </span>
-  </header>
-  <section class="e-content">
-    <p>
-      {{ post.data.page.excerpt | md | safe }}
-    </p>
-    <span><a href="{{ post.url }}">Continue reading&hellip;</a></span>
-  </section>
-</article>
-{% endfor %}
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}
