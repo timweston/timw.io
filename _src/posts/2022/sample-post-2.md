@@ -7,7 +7,7 @@ tags:
   - posts
   - sample tag
   - some tag 2
-layout: layouts/post.njk
+layout: post.njk
 ---
 
 Odio eu feugiat pretium nibh ipsum consequat nisl. Nibh sit amet commodo nulla. Facilisis sed odio morbi quis. <!-- excerpt --> Sit amet purus gravida quis blandit. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. Eget nunc lobortis mattis aliquam faucibus purus. Aliquet nec ullamcorper sit amet. Leo vel orci porta non pulvinar neque. Condimentum vitae sapien pellentesque habitant morbi tristique senectus et netus. Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi. Sed risus ultricies tristique nulla aliquet enim. Mattis pellentesque id nibh tortor id aliquet. Ultrices vitae auctor eu augue ut lectus arcu.

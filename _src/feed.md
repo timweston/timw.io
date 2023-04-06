@@ -1,4 +1,4 @@
 ---
 title: Atom Feed
-layout: layouts/feed.njk
+layout: feed.njk
 ---

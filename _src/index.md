@@ -1,4 +1,4 @@
 ---
 title: Home
-layout: layouts/home.njk
+layout: home.njk
 ---

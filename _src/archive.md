@@ -1,4 +1,4 @@
 ---
 title: Archive
-layout: layouts/archive.njk
+layout: archive.njk
 ---

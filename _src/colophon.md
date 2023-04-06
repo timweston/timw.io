@@ -1,6 +1,6 @@
 ---
 title: Colophon
-layout: layouts/page.njk
+layout: page.njk
 ---
 
 <header>
