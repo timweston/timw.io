@@ -1,81 +1,31 @@
 const { DateTime } = require('luxon');
 
-/* eleventy-plugin-seo plugin */
-const pluginSEO = require('eleventy-plugin-seo');
+const hljs = require('@11ty/eleventy-plugin-syntaxhighlight');
+const rss = require('@11ty/eleventy-plugin-rss');
+const seo = require('eleventy-plugin-seo');
 
-/* eleventy-plugin-syntaxhighlight plugin */
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-
-/* RSS plugin */
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-
-/* markdown-it */
-const markdownIt = require('markdown-it');
+const filters = require('./_src/_11ty/filters.js');
 
 module.exports = function (eleventyConfig) {
-  /* Add eleventy-plugin-seo plugin */
-  eleventyConfig.addPlugin(pluginSEO, require('./_src/_data/seo.json'));
+  // third-party plugins
+  eleventyConfig.addPlugin(hljs);
+  eleventyConfig.addPlugin(rss);
+  eleventyConfig.addPlugin(seo, require('./_src/_data/seo.json'));
 
-  /* Add eleventy-plugin-syntaxhighlight plugin */
-  eleventyConfig.addPlugin(syntaxHighlight);
+  // passthrough file copy
+  eleventyConfig.addPassthroughCopy('_src/css');
+  eleventyConfig.addPassthroughCopy('_src/img');
 
-  /* Add RSS plugin */
-  eleventyConfig.addPlugin(pluginRss);
+  // filters
+  Object.keys(filters).forEach((filter) => {
+    eleventyConfig.addFilter(filter, filters[filter]);
+  });
 
-  /* Set up excerpt */
+  // config
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
     excerpt_separator: '<!-- excerpt -->',
   });
-
-  /* Allow passthrough of CSS folder */
-  eleventyConfig.addPassthroughCopy('_src/css');
-
-  /* Allow passthrough of img folder */
-  eleventyConfig.addPassthroughCopy('_src/img');
-
-  /* Add filter for markdown-it; ensures excerpts are processed through markdown */
-  eleventyConfig.addFilter('md', function (content = '') {
-    return markdownIt({ html: true }).render(content);
-  });
-
-  /* Add filter for readable date */
-  eleventyConfig.addFilter('readableDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(
-      'dd LLL yyyy'
-    );
-  });
-
-  /* Add filter for HTML date string */
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
-  });
-
-  /* Add filter for permalink date string */
-  eleventyConfig.addFilter('pathDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy/LL/dd');
-  });
-
-  /* Add filter for first `n` elements of a collection */
-  eleventyConfig.addFilter('head', (array, n) => {
-    if (!Array.isArray(array) || array.length === 0) {
-      return [];
-    }
-    if (n < 0) {
-      return array.slice(n);
-    }
-    return array.slice(0, n);
-  });
-
-  /* Filter certain tags from the tag list on a post */
-  function filterTagList(tags) {
-    return (tags || []).filter(
-      (tag) => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1
-    );
-  }
-
-  /* Add filter for filterTagList */
-  eleventyConfig.addFilter('filterTagList', filterTagList);
 
   /* Collection of all tags */
   eleventyConfig.addCollection('tagList', function (collection) {
@@ -86,6 +36,7 @@ module.exports = function (eleventyConfig) {
     return filterTagList([...tagSet]).sort();
   });
 
+  // settings
   return {
     dir: {
       input: '_src',
