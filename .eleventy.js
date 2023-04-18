@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('_src/css');
   eleventyConfig.addPassthroughCopy('_src/img');
 
-  // filters
+  // filters - from _11ty/filters.js
   Object.keys(filters).forEach((filter) => {
     eleventyConfig.addFilter(filter, filters[filter]);
   });
@@ -25,15 +25,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
     excerpt_separator: '<!-- excerpt -->',
-  });
-
-  /* Collection of all tags */
-  eleventyConfig.addCollection('tagList', function (collection) {
-    let tagSet = new Set();
-    collection.getAll().forEach((item) => {
-      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
-    });
-    return filterTagList([...tagSet]).sort();
   });
 
   // settings
