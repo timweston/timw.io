@@ -1,8 +1,6 @@
 # timw.io blog
 
-This blog started with the [Eleventy](https://github.com/11ty/eleventy) 11ty blog starter and is hosted on [Netlify](https://netlify.app).
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/dc68ba78-a8fb-4327-98e9-f703f7ef5f0a/deploy-status)](https://app.netlify.com/sites/timw-io/deploys)
+This blog started with the [Eleventy](https://github.com/11ty/eleventy) 11ty blog starter.
 
 ## Eleventy Plugins
 

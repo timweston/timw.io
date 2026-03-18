@@ -9,7 +9,7 @@ layout: page.njk
 
 <section>
 
-The site is created using [Eleventy](https://www.11ty.dev), the static site generator, and is hosted on [Netlify](https://www.netlify.com). The source code for the site is available on [GitHub](https://github.com/timweston/timw.io).
+The site is created using [Eleventy](https://www.11ty.dev), the static site generator. The source code for the site is available on [GitHub](https://github.com/timweston/timw.io).
 
 The site uses the following Eleventy plugins:
 
